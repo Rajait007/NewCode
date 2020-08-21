@@ -1,0 +1,26 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "jasmine-node spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.16.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarveyD/node-jenkins-app-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HarveyD/node-jenkins-app-example/issues"
+  },
+  "homepage": "https://github.com/HarveyD/node-jenkins-app-example#readme",
+  "description": ""
+}
