@@ -12,6 +12,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "eslint": "^7.8.1",
     "jasmine-node": "^1.16.2"
   },
   "repository": {
