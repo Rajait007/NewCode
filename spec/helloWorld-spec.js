@@ -4,9 +4,9 @@ var server = require("../app.js");
 
 describe("Hello World Server", function() {
   describe("GET /", function() {
-    it("returns status code 200", function(done) {
+    it("returns status code 500", function(done) {
       request.get(base_url, function(error, response, body) {
-        expect(response.statusCode).toBe(200);
+        expect(response.statusCode).toBe(500);
         done();
       });
     });
@@ -17,7 +17,7 @@ describe("Hello World Server", function() {
         done();
 
         server.close();
-        //10th  sep fail case
+        //10th  sep 2nd fail case
       });
     });
   });
