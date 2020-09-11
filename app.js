@@ -8,12 +8,12 @@ app.get('/1', (req, res) => res.send('Delhi'))
 app.get('/City/:CityName/:CityCode', function(req, res) {
     var data = {
         "City": {
-            "Name": req.params.CityName.toUpperCase,
+            "Name": req.params.CityName,
             "Code": req.params.CityCode
         }
     }; 
-
-    send.json(data);
+console.log(data);
+    res.send(data)
 });
 var server = app.listen(3000, () => {
 
