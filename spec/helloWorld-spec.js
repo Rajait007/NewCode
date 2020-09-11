@@ -11,6 +11,16 @@ describe("Hello World Server", function() {
         done();
       });
     });
+
+    
+    it("returns  Delhi", function(done) {
+      request.get(base_url+"City/:CityName/:CityCode", function(error, response, body) {
+        data.body = JSON.parse(body);
+        expect(data.body.City.CityName).toBe("DELHI");
+        done();
+      });
+    });
+
     it("returns  Delhi", function(done) {
       request.get(base_url+"1", function(error, response, body) {
         expect(body).toBe("Delhi");

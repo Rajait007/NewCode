@@ -4,6 +4,17 @@ const app = express()
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/1', (req, res) => res.send('Delhi'))
+
+app.get('/City/:CityName/:CityCode', function(req, res) {
+    var data = {
+        "City": {
+            "Name": req.params.CityName.toUpperCase,
+            "Code": req.params.CityCode
+        }
+    }; 
+
+    send.json(data);
+});
 var server = app.listen(3000, () => {
 
     console.log("Listening on port " + server.address().port + "...");
