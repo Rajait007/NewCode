@@ -20,8 +20,8 @@ describe("Hello World Server", function() {
       frisby
         .get(base_url+"City/delhi/1")
         .then(function(response) {
-          expect(response.json.City.Name).toBe("Delhi");
-          expect(response.json.City.Code).toBe(1);
+          expect(response.json.City.Name).toBe("DELHI");
+          expect(response.json.City.Code).toEqual(1);
         })
         .done(done);
     })
