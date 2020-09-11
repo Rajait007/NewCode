@@ -1,4 +1,5 @@
 var request = require("request");
+const frisby = require('frisby');
 var base_url = "http://localhost:3000/";
 
 var server = require("../app.js");
@@ -13,13 +14,22 @@ describe("Hello World Server", function() {
     });
 
     
-    /*it("returns  Delhi", function(done) {
-      request.get(base_url+"City/delhi/1", function(error, response, body) {
-        data.body = JSON.parse(body);
-        expect(data.body.City.Name).toBe("DELHI");
-        done();
-      });
-    });*/
+    it("returns  Delhi", function(done) {
+
+      it("should return the summary for the given page title", function(done) {
+      frisby
+        .get(BASE_URL + "City/delhi/1")
+        .then(function(response) {
+          expect(response.status).toBe(200);
+          expect(response.json.Name).toBe("Delhi");
+          expect(response.json.Code).toBe(1);
+        })
+        .done(done);
+    })
+ 
+  }); 
+ 
+   
 
     it("returns  Delhi", function(done) {
       request.get(base_url+"1", function(error, response, body) {
