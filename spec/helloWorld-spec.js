@@ -14,15 +14,15 @@ describe("Hello World Server", function() {
     });
 
     
-    describe("GET /page/summary/{title}", function() {
+    describe("GET City/delhi/1", function() {
  
       it("should return the summary for the given page title", function(done) {
       frisby
         .get(base_url+"City/delhi/1")
         .then(function(response) {
           expect(response.status).toBe(200);
-          expect(response.json.Name).toBe("Delhi");
-          expect(response.json.Code).toBe(1);
+          expect(response.json.City.Name).toBe("Delhi");
+          expect(response.json.City.Code).toBe(1);
         })
         .done(done);
     })
