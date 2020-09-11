@@ -18,7 +18,7 @@ describe("Hello World Server", function() {
  
       it("should return the summary for the given page title", function(done) {
       frisby
-        .get(BASE_URL + "City/delhi/1")
+        .get(base_url+"City/delhi/1")
         .then(function(response) {
           expect(response.status).toBe(200);
           expect(response.json.Name).toBe("Delhi");
