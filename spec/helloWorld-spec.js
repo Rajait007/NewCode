@@ -1,23 +1,24 @@
-var request = require("request");
+import { get } from "request";
 var base_url = "http://localhost:3000/";
-var server = require("../app.js");
+import { close } from "../app.js";
 
 describe("Hello World Server", function() {
   describe("GET /", function() {
     it("returns status code 500", function(done) {
-      request.get(base_url, function(error, response, body) {
+      get(base_url, function(error, response, body) {
         expect(response.statusCode).toBe(500);
         done();
       });
     });
 
     it("returns Hello World", function(done) {
-      request.get(base_url, function(error, response, body) {
+      get(base_url, function(error, response, body) {
         expect(body).toBe("Hello World");
         done();
 
-        server.close();
+        close();
         //10th  sep 2nd fail case
+        //
       });
     });
   });

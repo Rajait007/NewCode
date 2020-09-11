@@ -1,8 +1,9 @@
-const express = require('express')
+import express from 'express';
 const app = express()
 
 app.get('/', (req, res) => res.send('Hello World!'))
-
+app.get('/1', (req, res) => res.send('Delhi'))
+app.get('/2', (req, res) => res.send('Mumbai'))
 var server = app.listen(3000, () => {
 
     console.log("Listening on port " + server.address().port + "...");
@@ -17,5 +18,6 @@ var server = app.listen(3000, () => {
 //3rd sep 11:34 PM IST
 //3rd sep 11:42 PM IST 
 // 4th sep 7:37 PM IST 
+//
 
-module.exports = server;
+export default server;
