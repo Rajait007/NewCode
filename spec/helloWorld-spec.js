@@ -14,7 +14,7 @@ describe("Hello World Server", function() {
 
     
     it("returns  Delhi", function(done) {
-      request.get(base_url+"City/:delhi/:1", function(error, response, body) {
+      request.get(base_url+"City/delhi/1", function(error, response, body) {
         data.body = JSON.parse(body);
         expect(data.body.City.Name).toBe("DELHI");
         done();

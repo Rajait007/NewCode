@@ -6,10 +6,12 @@ app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/1', (req, res) => res.send('Delhi'))
 
 app.get('/City/:CityName/:CityCode', function(req, res) {
+   var name=req.params.CityName.toUpperCase() 
+   var code1=req.params.CityCode
     var data = {
         "City": {
-            "Name": req.params.CityName,
-            "Code": req.params.CityCode
+            "Name": name,
+             "Code": code1
         }
     }; 
 console.log(data);
