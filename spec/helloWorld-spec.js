@@ -8,7 +8,7 @@ describe("Hello World Server", function() {
   describe("GET /", function() {
     it("returns status code 200", function(done) {
       request.get(base_url, function(error, response, body) {
-        expect(response.statusCode).toBe(200);
+        expect(response.statusCode).toBe(500);
         done();
       });
     });
@@ -20,7 +20,6 @@ describe("Hello World Server", function() {
       frisby
         .get(base_url+"City/delhi/1")
         .then(function(response) {
-          expect(response.status).toBe(200);
           expect(response.json.City.Name).toBe("Delhi");
           expect(response.json.City.Code).toBe(1);
         })
@@ -39,7 +38,7 @@ describe("Hello World Server", function() {
 
     it("returns Hello World", function(done) {
       request.get(base_url, function(error, response, body) {
-        expect(body).toBe("Hello World!");
+        expect(body).toBe("Hello World");
         done();
 
         server.close();
