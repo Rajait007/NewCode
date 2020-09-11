@@ -21,6 +21,7 @@ describe("Hello World Server", function() {
         .get(base_url+"City/delhi/1")
         .then(function(response) {
           expect(response.json.City.Name).toBe("DELHI");
+          expect(response.json.City.Code).toBe("1");
         })
         .done(done);
     })
