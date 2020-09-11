@@ -13,6 +13,9 @@ describe("Hello World Server", function() {
       });
     });
 
+    
+    describe("GET /page/summary/{title}", function() {
+ 
       it("should return the summary for the given page title", function(done) {
       frisby
         .get(BASE_URL + "City/delhi/1")
@@ -25,10 +28,8 @@ describe("Hello World Server", function() {
     })
  
   }); 
- 
-   
 
-    it("returns  Delhi", function(done) {
+    it("returns only Delhi", function(done) {
       request.get(base_url+"1", function(error, response, body) {
         expect(body).toBe("Delhi");
         done();
