@@ -13,9 +13,6 @@ describe("Hello World Server", function() {
       });
     });
 
-    
-    it("returns  Delhi", function(done) {
-
       it("should return the summary for the given page title", function(done) {
       frisby
         .get(BASE_URL + "City/delhi/1")
