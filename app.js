@@ -17,6 +17,19 @@ app.get('/City/:CityName/:CityCode', function(req, res) {
 console.log(data);
     res.send(data)
 });
+
+app.get('/Hospital/:HospitalName', function(req, res) {
+    var name=req.params.HospitalName.toUpperCase();
+    var Type1="dental";
+     var data = {
+         "HosPital": {
+             "Name": name,
+              "type": Type1
+         }
+     }; 
+ console.log(data);
+     res.send(data)
+ });
 var server = app.listen(3000, () => {
 
     console.log("Listening on port " + server.address().port + "...");

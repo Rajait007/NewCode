@@ -16,7 +16,7 @@ describe("Hello World Server", function() {
     
     describe("GET City/delhi/1", function() {
  
-      it("should return the summary for the given page title", function(done) {
+      it("should return the City name in caps and a city code", function(done) {
       frisby
         .get(base_url+"City/delhi/1")
         .then(function(response) {
@@ -27,6 +27,19 @@ describe("Hello World Server", function() {
     })
  
   }); 
+  describe("GET Hospital/:Apolo", function() {
+ 
+    it("should return the hospital  name in caps and a type of hospital", function(done) {
+    frisby
+      .get(base_url+"Hospital/:Apolo")
+      .then(function(response) {
+        expect(response.json.City.Name).toBe("APOLO");
+        expect(response.json.City.Code).toBe("dental");
+      })
+      .done(done);
+  })
+
+}); 
 
     it("returns only Delhi", function(done) {
       request.get(base_url+"1", function(error, response, body) {
