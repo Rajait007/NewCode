@@ -22,7 +22,7 @@ app.get('/Hospital/:HospitalName', function(req, res) {
     var name=req.params.HospitalName.toUpperCase();
     var Type1="dental";
      var data = {
-         "HosPital": {
+         "Hospital": {
              "Name": name,
               "type": Type1
          }
