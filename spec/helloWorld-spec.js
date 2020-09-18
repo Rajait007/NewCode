@@ -31,7 +31,7 @@ describe("Hello World Server", function() {
  
     it("should return the hospital  name in caps and a type of hospital", function(done) {
     frisby
-      .get(base_url+"Hospital/:Apolo")
+      .get(base_url+"Hospital/Apolo")
       .then(function(response) {
         expect(response.json.Hospital.Name).toBe("APOLO");
         expect(response.json.Hospital.type).toBe("dental");
