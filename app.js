@@ -1,4 +1,4 @@
-const express = require('express')
+import express from 'express';
 const app = express()
 
 app.get('/', (req, res) => res.send('Hello World!'))
@@ -47,4 +47,4 @@ var server = app.listen(3000, () => {
 // 21st sep 
 //21st test with eslint
 
-module.exports = server;
+export default server;
