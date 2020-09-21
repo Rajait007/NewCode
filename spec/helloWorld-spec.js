@@ -32,7 +32,7 @@ describe("Hello World Server", function() {
     frisby
       .get(base_url+"Hospital/Apolo")
       .then(function(response) {
-        expect(response.json.Hospital.Name).toBe("fortise");
+        expect(response.json.Hospital.Name).toBe("APOLO");
         expect(response.json.Hospital.type).toBe("dental");
       })
       .done(done);
