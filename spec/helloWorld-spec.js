@@ -1,7 +1,6 @@
 var request = require("request");
 const frisby = require('frisby');
 var base_url = "http://localhost:3000/";
-
 var server = require("../app.js");
 
 describe("Hello World Server", function() {
@@ -33,7 +32,7 @@ describe("Hello World Server", function() {
     frisby
       .get(base_url+"Hospital/Apolo")
       .then(function(response) {
-        expect(response.json.Hospital.Name).toBe("APOLO");
+        expect(response.json.Hospital.Name).toBe("fortise");
         expect(response.json.Hospital.type).toBe("dental");
       })
       .done(done);
